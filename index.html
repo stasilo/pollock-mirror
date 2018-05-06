@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>pollock-mirror</title>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  canvas {
+    cursor: pointer;
+  }
+  .seed-container {
+    cursor: auto;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 12.25px;
+    font-family: 'Oxygen', sans-serif
+  }
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                    not supported by any browser */
+  }
+  .seed-text {
+    font-weight: 700;
+  }
+  .howto {
+    font-size: 9px;
+  }
+  #fill {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" class="noselect"></canvas>
+  <header class="seed-container">
+  <!-- <div>seed – <span class="seed-text">12380</span></div> -->
+  <div>pollock mirror</div>
+  <div class="howto">stasilo.se</div>
+  </header>
+  <video id="videoOut" width="640px" height="480px" style="display: block; mix-blend-mode: none; position: absolute; right: 0; bottom: 0; opacity: 0.7; width: 15vw; height: auto; transform: rotateY(180deg); z-index: 999;"></video>
+  <script src="vendor/getUserMedia.js"></script>
+  <script src="bundle.js"></script>
+</body>
+</html>
